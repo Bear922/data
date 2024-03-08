@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" href="/static/plugins/bootstrap-5.3.0/css/bootstrap.css">
+    <style>
+        .body-main {
+            padding: 20px;
+        }
+
+        .top-navbar {
+            /*background-color: rgba(185, 238, 106);*/
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .centerTitle {
+            text-align: center;
+            margin-top: 1rem;
+            padding: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+<main>
+    <nav class="top-navbar navbar navbar-expand-md bg-light fixed-top" aria-label="Thirteenth navbar example">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarsExample11" aria-controls="navbarsExample11" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse d-lg-flex" id="navbarsExample11">
+                <a class="navbar-brand col-lg-3 me-0" href="#">植物新品种知识产权价值评估系统</a>
+                <ul class="navbar-nav col-lg-6 justify-content-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page">
+                            首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="history.html">历史记录</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="exhibition.html">查看情况</a>
+                    </li>
+                </ul>
+                <div class="d-lg-flex col-lg-3 justify-content-lg-end">
+                    <a class="nav-link" href="login.html">退出登录</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="body-main container">
+        <h1 class="centerTitle">新植物品种相关参数</h1>
+        <div class="mb-3 row">
+            <label for="inputPlantVariety" class="col-sm-2 col-form-label">植物品种</label>
+            <div class="col-sm-10">
+                <select class="form-select" id="inputPlantVariety" aria-label="Default select example">
+                    <option selected>油菜</option>
+                    <option value="1">水稻</option>
+                    <option value="2">小麦</option>
+                    <option value="3">其他</option>
+                </select>
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label for="inputPlantName" class="col-sm-2 col-form-label">植物名称</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputPlantName" placeholder="请输入植物名称">
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label for="inputPlantLicenceYears" class="col-sm-2 col-form-label">植物许可年限</label>
+            <div class="col-sm-10">
+                <select class="form-select" id="inputPlantLicenceYears" aria-label="Default select example">
+                    <option selected>请选择</option>
+                    <option value="1">2024</option>
+                    <option value="2">2023</option>
+                    <option value="3">2022</option>
+                    <option value="4">2021</option>
+                    <option value="5">2020</option>
+                    <option value="6">2019</option>
+                </select>
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label for="inputGmoSafetyCertificate" class="col-sm-2 col-form-label">转基因生物安全证书</label>
+            <div class="col-sm-10">
+                <select class="form-select" id="inputGmoSafetyCertificate" aria-label="Default select example">
+                    <option selected>请选择</option>
+                    <option value="1">非转基因新品种或取得转基因安全证书</option>
+                    <option value="2">已提交申请转基因安全证书材料但为受理</option>
+                    <option value="3">没有申请获取转基因生物安全证书</option>
+                </select>
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label for="inputPlantNewVarietyRights" class="col-sm-2 col-form-label">植物新品种权</label>
+            <div class="col-sm-10">
+                <select class="form-select" id="inputPlantNewVarietyRights" aria-label="Default select example">
+                    <option selected>请选择</option>
+                    <option value="1">已获得植物新品种权</option>
+                    <option value="2">植物新品种权正在申请</option>
+                    <option value="3">没有申请植物新品种权</option>
+                </select>
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label for="inputPlantBreedingPatent" class="col-sm-2 col-form-label">育种专利</label>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" id="inputPlantBreedingPatent"
+                       placeholder="请输入育种专利个数">
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label for="inputPlantVarietyRegistration" class="col-sm-2 col-form-label">品种登记</label>
+            <div class="col-sm-10">
+                <select class="form-select" id="inputPlantVarietyRegistration" aria-label="Default select example">
+                    <option selected>请选择</option>
+                    <option value="1">已通过国家品种登记</option>
+                    <option value="2">已通过省级品种登记</option>
+                    <option value="3">没有通过品种登记</option>
+                </select>
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label for="inputPlantNumberOfPatentsPassed" class="col-sm-2 col-form-label">通过省级登记个数</label>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" id="inputPlantNumberOfPatentsPassed"
+                       placeholder="请输入省级登记个数">
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label for="inputEconomicLife" class="col-sm-2 col-form-label">经济寿命</label>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" id="inputEconomicLife" placeholder="请输入植物经济寿命">
+            </div>
+        </div>
+        <div class="input-group mb-3">
+            <label for="inputPlantYield" class="col-sm-2 col-form-label">产量</label>
+            <input type="text" class="form-control" placeholder="请输入产量" aria-label="产量"
+                   aria-describedby="请输入产量" id="inputPlantYield">
+            <span class="input-group-text">kg/hm&#178;</span>
+        </div>
+
+        <div class="input-group mb-3">
+            <label for="inputPlantYield" class="col-sm-2 col-form-label">含油量</label>
+            <input type="text" class="form-control" placeholder="请输入含油量" aria-label="含油量"
+                   aria-describedby="请输入含油量" id="inputPlantOilContent">
+            <span class="input-group-text">%</span>
+        </div>
+
+        <div class="input-group mb-3">
+            <label for="inputPlantYield" class="col-sm-2 col-form-label">介酸含量</label>
+            <input type="text" class="form-control" placeholder="请输入介酸含量" aria-label="介酸含量"
+                   aria-describedby="请输入介酸含量" id="inputPlantMesopicAcid">
+            <span class="input-group-text">%</span>
+        </div>
+
+        <div class="mb-3 row">
+            <label for="inputVarietyLicensing" class="col-sm-2 col-form-label">品种许可数量</label>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" id="inputVarietyLicensing"
+                       placeholder="请输入品种许可数量">
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label for="inputSuitablePlantingArea" class="col-sm-2 col-form-label">适宜种植地区</label>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" id="inputSuitablePlantingArea"
+                       placeholder="请输入适宜种植地区个数">
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label for="inputPlantAntimicrobialNucleosis" class="col-sm-2 col-form-label">抗菌核病</label>
+            <div class="col-sm-10">
+                <select class="form-select" id="inputPlantAntimicrobialNucleosis"
+                        aria-label="Default select example">
+                    <option selected>请选择</option>
+                    <option value="1">低菌核病</option>
+                    <option value="2">中菌核病</option>
+                    <option value="3">高菌核病</option>
+                </select>
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label for="inputPlantAntiviral" class="col-sm-2 col-form-label">抗病毒病</label>
+            <div class="col-sm-10">
+                <select class="form-select" id="inputPlantAntiviral" aria-label="Default select example">
+                    <option selected>请选择</option>
+                    <option value="1">低病毒病</option>
+                    <option value="2">中病毒病</option>
+                    <option value="3">高病毒病</option>
+                </select>
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label for="inputPlantColdResistance" class="col-sm-2 col-form-label">抗寒性</label>
+            <div class="col-sm-10">
+                <select class="form-select" id="inputPlantColdResistance" aria-label="Default select example">
+                    <option selected>请选择</option>
+                    <option value="1">强</option>
+                    <option value="2">较强</option>
+                    <option value="3">弱</option>
+                </select>
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label for="inputPlantLodging" class="col-sm-2 col-form-label">抗倒性</label>
+            <div class="col-sm-10">
+                <select class="form-select" id="inputPlantLodging" aria-label="Default select example">
+                    <option selected>请选择</option>
+                    <option value="1">强</option>
+                    <option value="2">较强</option>
+                    <option value="3">弱</option>
+                </select>
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label for="inputTechnicalMaturity" class="col-sm-2 col-form-label">技术成熟性</label>
+            <div class="col-sm-10">
+                <select class="form-select" id="inputTechnicalMaturity" aria-label="Default select example">
+                    <option selected>请选择</option>
+                    <option value="1">产业化阶段</option>
+                    <option value="2">中间试验阶段</option>
+                    <option value="3">实验室阶段</option>
+                </select>
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label for="inputTechnicalAdvancement" class="col-sm-2 col-form-label">技术先进性</label>
+            <div class="col-sm-10">
+                <select class="form-select" id="inputTechnicalAdvancement" aria-label="Default select example">
+                    <option selected>请选择</option>
+                    <option value="1">育种技术属于转基因育种技术</option>
+                    <option value="2">育种技术属于杂交育种技术</option>
+                    <option value="3">育种技术属于常规育种技术</option>
+                </select>
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label for="inputTechnicalStability" class="col-sm-2 col-form-label">技术稳定性</label>
+            <div class="col-sm-10">
+                <select class="form-select" id="inputTechnicalStability" aria-label="Default select example">
+                    <option selected>请选择</option>
+                    <option value="1">好</option>
+                    <option value="2">较好</option>
+                    <option value="3">差</option>
+                </select>
+            </div>
+        </div>
+        <!-- Button trigger modal -->
+        <div class="d-grid gap-2 col-6 mx-auto m-3 container">
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                提交
+            </button>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">提交确定</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        请确定是否提交相关数据
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-primary"
+                                onclick="window.location.href='exhibition.html'">
+                            确定
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</main>
+
+</body>
+<script src="/static/js/jquery-3.5.1.js"></script>
+<script src="/static/plugins/bootstrap-5.3.0/js/bootstrap.js"></script>
+</html>

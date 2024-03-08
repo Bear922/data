@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>历史记录</title>
+    <link rel="stylesheet" href="/static/plugins/bootstrap-5.3.0/css/bootstrap.css">
+    <link rel="stylesheet" href="/static/plugins/font-awesome-4.7.0/css/font-awesome.css">
+    <style>
+        .top-navbar {
+            /*background-color: rgba(185, 238, 106);*/
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .distance {
+            margin-left: 40px;
+        }
+
+        .btnLook, .btnDel {
+            --bs-btn-padding-y: .25rem;
+            --bs-btn-padding-x: .5rem;
+            --bs-btn-font-size: .75rem;
+        }
+
+        th, td {
+            text-align: center; /* 让单元格内容水平居中 */
+            padding: 8px; /* 添加内边距 */
+            border: 1px solid #dddddd; /* 添加边框 */
+        }
+    </style>
+</head>
+<body>
+<!--导航栏-->
+<nav class="top-navbar navbar navbar-expand-md bg-light fixed-top" aria-label="Thirteenth navbar example">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarsExample11" aria-controls="navbarsExample11" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-lg-flex" id="navbarsExample11">
+            <a class="navbar-brand col-lg-3 me-0" href="#">植物新品种知识产权价值评估系统</a>
+            <ul class="navbar-nav col-lg-6 justify-content-lg-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">首页</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page">历史记录</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="exhibition.html">查看情况</a>
+                </li>
+
+            </ul>
+            <div class="d-lg-flex col-lg-3 justify-content-lg-end">
+                <a class="nav-link " href="login.html">退出登录</a>
+            </div>
+
+        </div>
+    </div>
+</nav>
+
+<div class="row align-items-center justify-content-between">
+    <div class="col col-md-6 col-lg-3 col-xl-4">
+        <div class="input-group me-2 me-lg-3 fmxw-400">
+                            <span class="input-group-text">
+                                <svg class="icon icon-xs" x-description="Heroicon name: solid/search"
+                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                     aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                          d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                                          clip-rule="evenodd"></path>
+                                </svg>
+                            </span>
+            <input type="text" class="form-control" placeholder="Search orders">
+        </div>
+    </div>
+
+</div>
+
+<div class="container clearfix mt-lg-5">
+
+    <table class="table table-hover table-bordered caption-top">
+        <caption>历史记录</caption>
+        <thead class="table-light">
+        <tr>
+            <th scope="col">序号</th>
+            <th scope="col">植物品种</th>
+            <th scope="col">植物名称</th>
+            <th scope="col">植物评估价值</th>
+            <th scope="col">查询时间</th>
+            <th scope="col">操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>油菜</td>
+            <td>油菜品种F01</td>
+            <td>89.12</td>
+            <td>2024/2/25</td>
+            <td>
+                <button type="button" class="btnLook btn btn-primary" data-bs-toggle="modal" data-bs-target="#plantDetailsModal">查看</button>
+                <button class="btnDel btn btn-danger" data-bs-toggle="modal" data-bs-target="#showDel">删除</button>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>水稻</td>
+            <td>水稻品种S02</td>
+            <td>56</td>
+            <td>2024/2/26</td>
+            <td>
+                <button type="button" class="btnLook btn btn-primary" data-bs-toggle="modal" data-bs-target="#plantDetailsModal">查看</button>
+                <button class="btnDel btn btn-danger" data-bs-toggle="modal" data-bs-target="#showDel">删除</button>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td>水稻</td>
+            <td>水稻品种S02</td>
+            <td>56</td>
+            <td>2024/2/26</td>
+            <td>
+                <button type="button" class="btnLook btn btn-primary">查看</button>
+                <button class="btnDel btn btn-danger" data-bs-toggle="modal" data-bs-target="#showDel">删除</button>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">4</th>
+            <td>水稻</td>
+            <td>水稻品种S02</td>
+            <td>56</td>
+            <td>2024/2/26</td>
+            <td>
+                <button type="button" class="btnLook btn btn-primary">查看</button>
+                <button class="btnDel btn btn-danger" data-bs-toggle="modal" data-bs-target="#showDel">删除</button>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">5</th>
+            <td>小麦</td>
+            <td>小麦品种Ted332</td>
+            <td>82.12</td>
+            <td>2024/2/26</td>
+            <td>
+                <button type="button" class="btnLook btn btn-primary">查看</button>
+                <button class="btnDel btn btn-danger" data-bs-toggle="modal" data-bs-target="#showDel">删除</button>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">6</th>
+            <td>油菜</td>
+            <td>油菜品种F02</td>
+            <td>75.21</td>
+            <td>2024/2/27</td>
+            <td>
+                <button type="button" class="btnLook btn btn-primary">查看</button>
+                <button class="btnDel btn btn-danger" data-bs-toggle="modal" data-bs-target="#showDel">删除</button>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">7</th>
+            <td>水稻</td>
+            <td>水稻品种S03</td>
+            <td>61.89</td>
+            <td>2024/2/27</td>
+            <td>
+                <button type="button" class="btnLook btn btn-primary">查看</button>
+                <button class="btnDel btn btn-danger" data-bs-toggle="modal" data-bs-target="#showDel">删除</button>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">8</th>
+            <td>小麦</td>
+            <td>小麦品种Ted552</td>
+            <td>81.46</td>
+            <td>2024/2/28</td>
+            <td>
+                <button type="button" class="btnLook btn btn-primary">查看</button>
+                <button class="btnDel btn btn-danger" data-bs-toggle="modal" data-bs-target="#showDel">删除</button>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">9</th>
+            <td>油菜</td>
+            <td>油菜品种F03</td>
+            <td>70.38</td>
+            <td>2024/3/1</td>
+            <td>
+                <button type="button" class="btnLook btn btn-primary">查看</button>
+                <button class="btnDel btn btn-danger" data-bs-toggle="modal" data-bs-target="#showDel">删除</button>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">10</th>
+            <td>水稻</td>
+            <td>水稻品种S04</td>
+            <td>68.29</td>
+            <td>2024/3/2</td>
+            <td>
+                <button type="button" class="btnLook btn btn-primary">查看</button>
+                <button class="btnDel btn btn-danger" data-bs-toggle="modal" data-bs-target="#showDel">删除</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <!-- 植物详情模态框 -->
+    <div class="modal fade" id="plantDetailsModal" tabindex="-1" aria-labelledby="plantDetailsModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="plantDetailsModalLabel">植物详情</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- 这里放置植物详情 -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 删除确认模态框 -->
+    <div class="modal fade" id="showDel" tabindex="-1" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">删除记录提示</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    请确定是否删除相关历史数据
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                    <button type="button" id="btnConfirmDel" class="btn btn-primary">
+                        确定
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="/static/js/jquery-3.5.1.js"></script>
+<script src="/static/plugins/bootstrap-5.3.0/js/bootstrap.bundle.js"></script>
+<script>
+    // JavaScript to handle delete button click
+    document.addEventListener('DOMContentLoaded', function () {
+        const deleteButtons = document.querySelectorAll('.btnDel');
+        let deleteTargetRow;
+
+        deleteButtons.forEach(function (button) {
+            button.addEventListener('click', function () {
+                const row = button.closest('tr');
+                deleteTargetRow = row;
+            });
+        });
+
+        document.getElementById('btnConfirmDel').addEventListener('click', function () {
+            deleteTargetRow.remove();
+            const modalElement = document.getElementById('showDel');
+            const modal = bootstrap.Modal.getInstance(modalElement);
+            modal.hide();
+        });
+
+        // 添加查看按钮的点击事件监听器
+        const viewButtons = document.querySelectorAll('.btnLook');
+
+        viewButtons.forEach(function (button) {
+            button.addEventListener('click', function () {
+                const row = button.closest('tr');
+                const cells = row.querySelectorAll('td');
+                const species = cells[0].textContent;
+                const name = cells[1].textContent;
+                const value = parseFloat(cells[2].textContent).toFixed(2);
+                const economicValue = Math.floor(Math.random() * (99 - 50 + 1) + 50);
+                const legalValue = Math.floor(Math.random() * (99 - 50 + 1) + 50);
+                const technicalValue = Math.floor(Math.random() * (99 - 50 + 1) + 50);
+
+                const plantDetails = `
+                    <p>植物品种：${species}</p>
+                    <p>植物名称：${name}</p>
+                    <p>植物评估价值：${value}</p>
+                    <p>植物经济价值：${economicValue}</p>
+                    <p>植物法律价值：${legalValue}</p>
+                    <p>植物技术价值：${technicalValue}</p>
+                `;
+                const modalBody = document.querySelector('.modal-body');
+                modalBody.innerHTML = plantDetails;
+
+                // 显示模态框
+                const modalElement = document.getElementById('plantDetailsModal');
+                const modal = bootstrap.Modal.getInstance(modalElement);
+                modal.show();
+            });
+        });
+    });
+</script>
+</body>
+</html>

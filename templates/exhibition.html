@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>价值评估页</title>
+    <link rel="stylesheet" href="/static/plugins/bootstrap-5.3.0/css/bootstrap.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .top-navbar{
+            /*background-color: rgba(185, 238, 106);*/
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        .DetailShow {
+            height: 18vw;
+        }
+
+        .show p {
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+<nav class="top-navbar navbar navbar-expand-md bg-light fixed-top" aria-label="Thirteenth navbar example">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarsExample11" aria-controls="navbarsExample11" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-lg-flex" id="navbarsExample11">
+            <a class="navbar-brand col-lg-3 me-0" href="#">植物新品种知识产权价值评估系统</a>
+            <ul class="navbar-nav col-lg-6 justify-content-lg-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">首页</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="history.html">历史记录</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page">查看情况</a>
+                </li>
+            </ul>
+            <div class="d-lg-flex col-lg-3 justify-content-lg-end">
+                <a class="nav-link" href="login.html">退出登录</a>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="mian-show container mt-5">
+    <div class="container w-100 p-2">
+        <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+            <div class="carousel-inner w-100" style="height: 25vw">
+                <div class="carousel-item active">
+                    <img src="/static/img/bg_login.jpg" class="d-block w-100" alt="网络不佳图片加载中···">
+                </div>
+                <div class="carousel-item">
+                    <img src="/static/img/lbt2.jpg" class="d-block w-100" alt="网络不佳图片加载中···">
+                </div>
+                <div class="carousel-item">
+                    <img src="/static/img/lbt3.jpg" class="d-block w-100" alt="网络不佳图片加载中···">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide"
+                    data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide"
+                    data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <div class="show container mt-3">
+        <p class="text-start">根据对油菜品种F01的价值估算得出预期价值为</p>
+        <p id="plantValue" class="text-center" style="color: #a52834;font-size: 50px">73.24</p>
+    </div>
+    <!--    价值详情-->
+    <div class="container mx-auto w-100">
+        <div class="DetailShow d-flex align-items-start">
+            <div class="nav flex-column nav-pills me-3 p-2 " id="v-pills-tab" role="tablist"
+                 aria-orientation="vertical">
+                <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-economic"
+                        type="button" role="tab" aria-controls="v-pills-economic" aria-selected="true">新植物经济价值详情
+                </button>
+                <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-technology"
+                        type="button" role="tab" aria-controls="v-pills-technology" aria-selected="false">新植物技术价值详情
+                </button>
+                <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-law"
+                        type="button" role="tab" aria-controls="v-pills-law" aria-selected="false">新植物法律价值详情
+                </button>
+            </div>
+            <div class="tab-content p-2" id="v-pills-tabContent">
+                <div class="tab-pane fade show active" id="v-pills-economic" role="tabpanel"
+                     aria-labelledby="v-pills-economic-tab"
+                     tabindex="0">
+                    当前植物的经济价值为：<span id="economicValue" class="">65</span><br>
+                    产量和收益：新油菜品种可能具有更高的产量和更稳定的收益，这对农民和种植者来说是一个重要的利好因素。<br>
+                    化学成分和用途：新油菜品种可能具有特定的化学成分，使其在食品加工、生物燃料生产或其他工业用途中具有特殊价值。<br>
+                    市场需求和竞争：如果市场对新油菜品种的需求量大且竞争较小，则其经济价值可能会更高。<br>
+                    可持续性和适应性：如果新油菜品种能够适应不同的环境条件并且对农业实践具有积极影响，那么其经济价值可能会更高。<br>
+                    综合考虑以上因素，表明新油菜品种在市场上具有潜在的吸引力和可持续的发展前景。然而，需要进一步的市场调查和实践验证来确认这一评估，并制定相应的推广和发展策略。<br>
+                </div>
+                <div class="tab-pane fade" id="v-pills-technology" role="tabpanel"
+                     aria-labelledby="v-pills-technology-tab"
+                     tabindex="0">
+                    当前植物的技术价值为：<span id="technologyValue" class="">72</span><br>
+                    遗传特性和改良潜力：新油菜品种可能具有重要的遗传特性，如抗病性、耐旱性或高产性，这些特性对于提高农作物的生产效率和质量至关重要。<br>
+                    生物技术创新：该品种可能经过了基因编辑、转基因或其他生物技术手段的改良，使其具有更高的抗逆性、更好的品质或更广泛的适应性。<br>
+                    种植管理和农业实践：新油菜品种可能需要特定的种植管理技术或农业实践，以实现其最大的生产潜力和经济效益。<br>
+                    市场竞争和创新领域：如果该品种处于市场上的创新领域或者在农业技术领域具有竞争优势，那么其技术价值可能会更高。<br>
+                    综合考虑以上因素，表明新油菜品种在技术上具有潜在的创新性和应用前景。然而，需要进一步的科学研究和实践验证来确认这一评估，并制定相应的推广和应用策略，以实现其技术上的最大价值和社会效益。<br>
+                </div>
+                <div class="tab-pane fade" id="v-pills-law" role="tabpanel" aria-labelledby="v-pills-law-tab"
+                     tabindex="0">
+                    当前植物的法律价值为：<span id="lawValue" class="">51</span><br>
+                    知识产权保护：新油菜品种是否已经申请或获得了相关的专利或植物品种权，以确保其创新性和独特性受到法律保护。<br>
+                    合规性和法规遵从：品种的培育、推广和销售是否符合当地和国际的植物保护法规和标准，以确保其合法性和可持续性。此外，还需考虑与基因编辑或转基因技术相关的法律法规，以确保其合规性。<br>
+                    合同和许可协议：涉及新油菜品种的合同和许可协议是否符合法律要求，以确保各方权益的合法性和可执行性。这可能涉及与种植者、生产者、经销商和消费者之间的合同关系，以及与技术转让或知识产权许可相关的协议。<br>
+                    风险管理和诉讼风险：需要评估可能存在的法律风险和诉讼风险，例如侵权诉讼、合同纠纷或法规违规等，以制定相应的风险管理策略和法律合规措施。<br>
+                    综合考虑以上因素，通过对新油菜品种的法律价值进行分析，可以更好地理解其在法律框架内的地位和潜在风险，从而采取适当的法律措施和管理策略，确保其在市场上的合法性、可持续性和竞争优势。<br>
+                </div>
+            </div>
+        </div>
+        <p class="text-center mt-5" style="font-size: 20px">同类植物与新植物历史价格对比图</p>
+        <div id="main" class="container mt-3 p-2" style="width: 60vw;height:40vw;"></div>
+        <div class="d-grid gap-2 col-6 mx-auto m-3">
+            <button class="btn btn-primary" onclick=window.location.href='index.html'>退出</button>
+        </div>
+    </div>
+</div>
+
+<script src="/static/plugins/bootstrap-5.3.0/js/bootstrap.js"></script>
+<script src="/static/js/jquery-3.5.1.js"></script>
+<script src="/static/js/echarts.js"></script>
+<script>
+    var economic_value = document.getElementById('economicValue');
+    var technology_value = document.getElementById('technologyValue');
+    var law_value = document.getElementById('lawValue');
+    var totalPlantValue = document.getElementById('plantValue');
+    var random1 = Math.floor(Math.random() * 51) + 50;
+    var random2 = Math.floor(Math.random() * 51) + 50;
+    var random3 = Math.floor(Math.random() * 51) + 50;
+    economic_value.textContent = random1;
+    technology_value.textContent = random2;
+    law_value.textContent = random3;
+    var average = (random1 + random2 + random3) / 3;//最后展示的价值
+    average = average.toFixed(2);
+    totalPlantValue.textContent = average;
+    // 表格相关内容
+    var app = {};
+    var chartDom = document.getElementById('main');
+    var myChart = echarts.init(chartDom);
+    var option;
+
+    const posList = [
+        'left',
+        'right',
+        'top',
+        'bottom',
+        'inside',
+        'insideTop',
+        'insideLeft',
+        'insideRight',
+        'insideBottom',
+        'insideTopLeft',
+        'insideTopRight',
+        'insideBottomLeft',
+        'insideBottomRight'
+    ];
+    app.configParameters = {
+        rotate: {
+            min: -90,
+            max: 90
+        },
+        align: {
+            options: {
+                left: 'left',
+                center: 'center',
+                right: 'right'
+            }
+        },
+        verticalAlign: {
+            options: {
+                top: 'top',
+                middle: 'middle',
+                bottom: 'bottom'
+            }
+        },
+        position: {
+            options: posList.reduce(function (map, pos) {
+                map[pos] = pos;
+                return map;
+            }, {})
+        },
+        distance: {
+            min: 0,
+            max: 100
+        }
+    };
+    app.config = {
+        rotate: 90,
+        align: 'left',
+        verticalAlign: 'middle',
+        position: 'insideBottom',
+        distance: 15,
+        onChange: function () {
+            const labelOption = {
+                rotate: app.config.rotate,
+                align: app.config.align,
+                verticalAlign: app.config.verticalAlign,
+                position: app.config.position,
+                distance: app.config.distance
+            };
+            myChart.setOption({
+                series: [
+                    {
+                        label: labelOption
+                    },
+                    {
+                        label: labelOption
+                    }
+                ]
+            });
+        }
+    };
+    const labelOption = {
+        show: true,
+        position: app.config.position,
+        distance: app.config.distance,
+        align: app.config.align,
+        verticalAlign: app.config.verticalAlign,
+        rotate: app.config.rotate,
+        formatter: '{c}  {name|{a}}',
+        fontSize: 16,
+        rich: {
+            name: {}
+        }
+    };
+    option = {
+
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'shadow'
+            }
+        },
+        legend: {
+            data: ['同类植物', '新植物价值估算']
+        },
+
+        xAxis: [
+            {
+                type: 'category',
+                axisTick: {show: false},
+                data: ['2019', '2020', '2021', '2022', '2023']
+            }
+        ],
+        yAxis: [
+            {
+                type: 'value'
+            }
+        ],
+        series: [
+            {
+                name: '同类植物',
+                type: 'bar',
+                barGap: 0,
+                label: labelOption,
+                emphasis: {
+                    focus: 'series'
+                },
+                data: [46.52, 50.78, 58.44, 65.67, 70.78]
+            },
+            {
+                name: '新植物价值估算',
+                type: 'bar',
+                label: labelOption,
+                emphasis: {
+                    focus: 'series'
+                },
+                data: [58.54, 60.56, 65.89, 70.90, average]
+            }
+        ]
+    };
+
+    option && myChart.setOption(option);
+</script>
+</body>
+
+
+</html>
